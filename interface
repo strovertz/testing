@@ -5,11 +5,13 @@ import subprocess
 root = tk.Tk()
 root.geometry("400x400")
 
-# Define o canvas com uma imagem de fundo
+# Define o canvas
 canvas = tk.Canvas(root, width=400, height=400)
 canvas.pack()
-img = tk.PhotoImage(file='foto2.jpg')
-canvas.create_image(0, 0, image=img, anchor="nw")
+
+# Define o retângulo de fundo
+canvas.create_rectangle(0, 0, canvas.winfo_width(), canvas.winfo_height(), fill="cyan2", outline="")
+canvas.create_rectangle(0, 0, canvas.winfo_width(), canvas.winfo_height()//2, fill="pale green", outline="")
 
 # Define o botão "Executar Agriscan"
 def run_agriscan():
