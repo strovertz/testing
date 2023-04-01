@@ -1,0 +1,14 @@
+from tkinter import *
+from tkhtmlview import HTMLScrolledText
+
+def run_program():
+    html = '<h1>Minha Mapa</h1><p>Este é um mapa interativo.</p>'
+    window = Tk()
+    window.geometry('800x600')
+    window.title('Agriscan 360')
+    label = HTMLScrolledText(window, width=800, height=600)
+    label.pack()
+    label.set_html(html)
+    window.mainloop()
+
+run_program()

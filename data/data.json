@@ -1,0 +1,40 @@
+{
+    "pontos": [
+      {
+        "nome": "Sede Fazenda 1",
+        "latitude": -28.915691,
+        "longitude": -54.556773,
+        "tipo": "marcador"
+      },
+      {
+        "nome": "Sede Fazenda 2",
+        "latitude": -28.894776,
+        "longitude": -54.542115,
+        "tipo": "marcador"
+      },
+      {
+        "nome": "Terreno 1",
+        "coordenadas": [
+          [-28.914309, -54.555116],
+          [-28.919208, -54.556693],
+          [-28.921843, -54.540577],
+          [-28.916435, -54.539869]
+        ],
+        "cultivo":"Soja",
+        "tipo": "demarcacao",
+        "data": "2022-10-20"
+      },
+      {
+        "nome": "Terreno 2",
+        "coordenadas": [
+          [-28.889221, -54.558918],
+          [-28.886309, -54.553044],
+          [-28.895494, -54.541462],
+          [-28.899057, -54.555493]
+        ],
+        "cultivo":"Soja",
+        "tipo": "demarcacao",
+        "data": "2022-12-12"
+      }
+    ]
+  }
