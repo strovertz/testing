@@ -22,3 +22,4 @@ btn_agriscan = tk.Button(canvas, text="Executar Agriscan", command=run_agriscan)
 btn_agriscan.pack(pady=10)
 
 root.mainloop()
+# teste
