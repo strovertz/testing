@@ -1,14 +1,22 @@
-from tkinter import *
-from tkhtmlview import HTMLScrolledText
+import tkinter as tk
+import webbrowser
+import subprocess
 
-def run_program():
-    html = '<h1>Minha Mapa</h1><p>Este é um mapa interativo.</p>'
-    window = Tk()
-    window.geometry('800x600')
-    window.title('Agriscan 360')
-    label = HTMLScrolledText(window, width=800, height=600)
-    label.pack()
-    label.set_html(html)
-    window.mainloop()
+root = tk.Tk()
+root.geometry("400x400")
 
-run_program()
+# Define o canvas com uma imagem de fundo
+canvas = tk.Canvas(root, width=400, height=400)
+canvas.pack()
+img = tk.PhotoImage(file='foto2.jpg')
+canvas.create_image(0, 0, image=img, anchor="nw")
+
+# Define o botão "Executar Agriscan"
+def run_agriscan():
+    subprocess.run(["python", "agriscan.py"])
+    webbrowser.open_new_tab("mapa.html")
+
+btn_agriscan = tk.Button(canvas, text="Executar Agriscan", command=run_agriscan)
+btn_agriscan.pack(pady=10)
+
+root.mainloop()
