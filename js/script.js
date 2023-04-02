@@ -19,6 +19,7 @@ const navLinks = document.querySelector('.nav-links');
 menuToggle.addEventListener('click', function() {
   mainNav.classList.toggle('open');
   navLogo.classList.toggle('open');
+  navLinks.classList.toggle('open');
 });
 
 // Seleciona todos os links do menu principal
@@ -29,6 +30,7 @@ mainNavLinks.forEach(function(link) {
   link.addEventListener('click', function() {
     mainNav.classList.remove('open');
     navLogo.classList.remove('open');
+    navLinks.classList.remove('open');
   });
 });
 
@@ -109,5 +111,6 @@ function generatePortfolioItems() {
     portfolioItems.appendChild(li);
   });
 }
+
 // Chama a função para gerar os itens do portfólio dinamicamente
 generatePortfolioItems();
