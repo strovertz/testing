@@ -65,3 +65,17 @@ mainNavLinks.forEach(function(link) {
     toggleMenu();
   });
 });
+const imagens = document.querySelectorAll(".portifolio-item img");
+const modal = document.querySelector("#modal");
+const modalImg = document.querySelector("#modal-img");
+
+imagens.forEach(function(img) {
+  img.addEventListener("click", function() {
+    modalImg.src = img.src;
+    modal.style.display = "block";
+  });
+});
+
+modal.addEventListener("click", function() {
+  modal.style.display = "none";
+});

@@ -169,7 +169,7 @@ body {
   }
 
   .service-icon {
-	width: 60px;
+	width: 100%;
 	margin-bottom: 30px;
   }
 
@@ -276,4 +276,132 @@ body {
 	  top: 20px;
 	  right: 20px;
 	}
+  }
+  .portfolio {
+    padding: 80px 0;
+    background-color: #f6f6f6;
+  }
+
+  .portfolio .section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .portfolio .section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 60px;
+  }
+
+  .portfolio-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-item {
+    position: relative;
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+
+  .portfolio-item:hover .portfolio-item-overlay {
+    transform: translateY(0);
+  }
+
+  .portfolio-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .portfolio-item .portfolio-item-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    transform: translateY(100%);
+    transition: all 0.3s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .portfolio-item .portfolio-item-overlay h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .portfolio-item .portfolio-item-overlay p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-item .portfolio-item-overlay .btn {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    width: 250px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .portfolio-item {
+      width: 100%;
+    }
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  footer ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  footer ul li:last-child {
+    margin-right: 0;
+  }
+
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  footer ul li a:hover {
+    color: #f00;
   }
