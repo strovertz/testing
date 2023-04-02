@@ -8,6 +8,13 @@
 	<link rel="stylesheet" href="styles/reset.css">
 	<link rel="stylesheet" href="styles/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+
 </head>
 <body>
 	<header class="header">
@@ -38,6 +45,12 @@
 			<a href="#" class="btn btn-primary">Get Started</a>
 		</div>
 	</section>
+  <section id="map">
+    <h2>Localização</h2>
+    <div class="map-container">
+      <iframe src="mapa.html" frameborder="0"></iframe>
+    </div>
+  </section>
 
 	<section class="services">
     <div class="container">
@@ -62,21 +75,20 @@
       </div>
     </div>
   </section>
-
+<!-- Seção do Portfólio -->
     <section class="portfolio">
       <div class="container">
-        <h2 class="section-title">Our Work</h2>
-        <p class="section-subtitle">Check out some of our latest projects.</p>
-        <div class="portfolio-grid">
-          <div class="portfolio-item">
+        <h2 data-aos="fade-down">Portfólio</h2>
+        <div class="portfolio-items">
+          <div class="portfolio-item" data-aos="fade-up">
             <img src="images/portfolio-1.jpg" alt="Portfolio Item">
             <div class="portfolio-item-overlay">
               <h3 class="portfolio-item-title">Project Name</h3>
               <p class="portfolio-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada eros quis enim lobortis.</p>
               <a href="#" class="btn btn-secondary">View Project</a>
-            </div>
+              </div>
           </div>
-          <div class="portfolio-item">
+          <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
             <img src="images/portfolio-2.jpg" alt="Portfolio Item">
             <div class="portfolio-item-overlay">
               <h3 class="portfolio-item-title">Project Name</h3>
@@ -84,7 +96,7 @@
               <a href="#" class="btn btn-secondary">View Project</a>
             </div>
           </div>
-          <div class="portfolio-item">
+          <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
             <img src="images/portfolio-3.jpg" alt="Portfolio Item">
             <div class="portfolio-item-overlay">
               <h3 class="portfolio-item-title">Project Name</h3>
@@ -96,29 +108,16 @@
       </div>
     </section>
 
-    <section class="about">
-      <div class="container">
-        <h2 class="section-title">About Us</h2>
-        <p class="section-subtitle">We are a team of experienced professionals dedicated to helping your business succeed online.</p>
-        <div class="about-grid">
-          <div class="about-item">
-            <img src="images/about-1.jpg" alt="About Item">
-            <h3 class="about-item-title">Who We Are</h3>
-            <p class="about-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada eros quis enim lobortis.</p>
-          </div>
-          <div class="about-item">
-            <img src="images/about-2.jpg" alt="About Item">
-            <h3 class="about-item-title">What We Do</h3>
-            <p class="about-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada eros quis enim lobortis.</p>
-          </div>
-          <div class="about-item">
-            <img src="images/about-3.jpg" alt="About Item">
-            <h3 class="about-item-title">Why Choose Us</h3>
-            <p class="about-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada eros quis enim lobortis.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- Seção Sobre com animações -->
+  <section class="about">
+    <div class="container">
+      <h2 data-aos="fade-down">Sobre Nós</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Texto sobre a empresa...</p>
+      <img src="about.jpg" alt="Imagem ilustrativa" data-aos="zoom-in" data-aos-delay="200">
+    </div>
+  </section>
+
+
 
     <section class="cta">
       <div class="container">
@@ -149,9 +148,8 @@
         <p class="footer-text">&copy; 2023 Agriscan</p>
       </div>
     </footer>
-
-    <script src="scripts/jquery-3.6.0.min.js"></script>
     <script src="scripts/scripts.js"></script>
+
   </body>
   </html>
 

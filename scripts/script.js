@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init();
+});
+
 // Função para abrir/fechar o menu lateral
 function toggleMenu() {
   const menu = document.querySelector(".menu");

@@ -1,0 +1,250 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Fontes */
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+  /* Variáveis */
+  :root {
+    --cor-primaria: #1c1c1c;
+    --cor-secundaria: #fcbb03;
+    --cor-terciaria: #fff;
+  }
+
+  /* Estilos Globais */
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  header img {
+    max-height: 50px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: none;
+    margin-left: auto;
+  }
+
+  .menu-toggle img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .menu a {
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 40px;
+  }
+
+  .menu a:hover {
+    color: var(--cor-secundaria);
+  }
+
+  .menu a.active {
+    color: var(--cor-secundaria);
+  }
+
+  .menu-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    z-index: 1000;
+  }
+
+  .menu-open a {
+    margin: 20px 0;
+  }
+
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+    padding: 20px 0;
+    width: 30px;
+    height: 20px;
+  }
+
+  .hamburger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--cor-terciaria);
+    border-radius: 5px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger span:nth-child(1) {
+    top: 0px;
+  }
+
+  .hamburger span:nth-child(2) {
+    top: 8px;
+  }
+
+  .hamburger span:nth-child(3) {
+    top: 16px;
+  }
+
+  .open .hamburger span:nth-child(1) {
+    top: 8px;
+    transform: rotate(45deg);
+  }
+
+  .open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .open .hamburger span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+
+  /* Hero */
+  .hero {
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center
+}
+
+/* Estilos do menu toggle aberto */
+.open .main-nav {
+  display: block;
+}
+
+.open .hamburger span:nth-child(1) {
+  top: 8px;
+  transform: rotate(45deg);
+}
+
+.open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.open .hamburger span:nth-child(3) {
+  top: 8px;
+  transform: rotate(-45deg);
+}
+
+/* Estilos para a seção de portfólio */
+.portfolio {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+}
+
+.portfolio-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-heading h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-heading p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.portfolio-item img {
+  transition: transform 0.5s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s;
+}
+
+.portfolio-item:hover .portfolio-item-overlay {
+  opacity: 1;
+}
+
+.portfolio-item-link {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+  transition: border-color 0.5s;
+}
+
+.portfolio-item-link:hover {
+  border-color: #f39c12;
+}
