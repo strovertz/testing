@@ -1,29 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Agriscan</title>
-	<link rel="stylesheet" href="styles.css">
+	<title>Agriscan - Seu mapa interativo</title>
+
+	<!-- Stripe CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/@stripe/stripe-js@1.18.0/themes/alpha-default.min.css">
+
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"/>
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>Agriscan</header>
-	<nav>
-		<a href="#">Home</a>
-		<a href="#">Sobre</a>
-		<a href="#">Contato</a>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">Agriscan</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNav">
+	      <ul class="navbar-nav">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="#">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Sobre</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Contato</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
 	</nav>
-	<section>
-		<aside>
-			<h2>Opções</h2>
-			<ul>
-				<li><a href="#">Opção 1</a></li>
-				<li><a href="#">Opção 2</a></li>
-				<li><a href="#">Opção 3</a></li>
-			</ul>
-		</aside>
-		<iframe src="mapa.html?version=1"></iframe>
+
+<!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="hero-title">Seu Mapa Interativo</h1>
+          <p class="hero-subtitle">Com o Agriscan, você pode visualizar e analisar os dados da sua propriedade em um mapa interativo.</p>
+          <a href="#" class="btn btn-primary">Saiba Mais</a>
+        </div>
+        <div class="col-md-6">
+          <iframe src="mapa.html" width="100%" height="400" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+	<!-- Features Section -->
+	<section class="features">
+		<div class="container">
+			<h2 class="section-title">Recursos do Agriscan</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="feature">
+						<i class="bi bi-globe"></i>
+						<h3 class="feature-title">Mapas Interativos</h3>
+						<p class="feature-description">Visualize e analise os dados da sua propriedade em um mapa interativo.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="feature">
+						<i class="bi bi-pie-chart"></i>
+						<h3 class="feature-title">Análise de Dados</h3>
+						<p class="feature-description">Análise os dados da sua propriedade para tomar decisões mais informadas.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="feature">
+						<i class="bi bi-clock"></i>
+						<h3 class="feature-title">Economize Tempo</h3>
+						<p class="feature-description">Economize tempo ao visualizar e gerenciar seus dados em um só lugar.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
-	<script src="scripts.js"></script>
-</body>
-</html>
+
+	<!-- Pricing Section -->
+	<section class="pricing">
+		<div class="container">
+			<h2 class="section-title">Preços do Agriscan</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">Plano Básico</h3>
+							<p class="card-subtitle">R$ 9,99 / mês</p>
+						</div>
+						<div class="card-body">
+							<ul>
+								<li>1 Mapa</li>
+								<li>10 Marcadores</li>
+								<li>Exportação de Dados</li>
+							</ul>
+							<a href="#" class="btn btn-primary">Comprar Agora</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">Plano Pro</h3>
+							<p class="card-subtitle">R$ 19,99 / mês</p>
+						</div>
+						<div class="card-body">
+							<ul>
+								<li>5 Mapas</li>
+								<li>50 Marcadores</li>
+								<li>Exportação de Dados</li>
+								<li>Relatórios Personalizados</li>
+							</ul>
+							<a href="#" class="btn btn-primary">Comprar Agora</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title">Plano Empresarial</h3>
+							<p class="card-subtitle">Entre em contato para preços</p>
+						</div>
+						<div class="card-body">
+							<ul>
+								<li>Mapas Ilimitados</li>
+								<li>Marcadores Ilimitados</li>
+								<li>Exportação de Dados</li>
+								<li>Relatórios Personalizados</li>
+								<li>Suporte Prioritário</li>
+							</ul>
+							<a href="#" class="btn btn-primary">Contate-nos</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<p class="footer-text">Copyright © 2022 |
+				<a href="#">Termos de Uso</a> |
+				<a href="#">Política de Privacidade</a>
+			</p>
+		</div>
+	</footer>
+
+	<!-- Stripe JS -->
+	<script src="https://js.stripe.com/v3/"></script
