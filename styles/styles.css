@@ -38,6 +38,15 @@ body {
   background-size: cover;
 }
 
+.mapa-section {
+  margin: 50px 0;
+  /* removido background-color: #f7f7f7; */
+}
+
+#map-iframe {
+  background-color: #fff;
+}
+
 #map {
   background-color: #f8f8f8;
   padding: 50px 0;
@@ -461,3 +470,11 @@ body {
   margin-bottom: 30px;
 }
 
+.contact-section {
+  margin: 50px 0;
+  background-color: #fff;
+  padding: 50px;
+  /* adicionado cor de fonte e background */
+  color: #333;
+  background-color: #f7f7f7;
+}
