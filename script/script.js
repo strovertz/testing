@@ -39,3 +39,29 @@ menuLinks.forEach(function(link) {
     iframe.src = href;
   });
 });
+// Função para abrir/fechar o menu toggle
+function toggleMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const mainNav = document.querySelector('.main-nav');
+
+  hamburger.classList.toggle('open');
+  mainNav.classList.toggle('open');
+}
+
+// Seleciona o botão do menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+
+// Adiciona um listener de clique no botão do menu toggle
+menuToggle.addEventListener('click', function() {
+  toggleMenu();
+});
+
+// Seleciona todos os links do menu principal
+const mainNavLinks = document.querySelectorAll('.main-nav a');
+
+// Adiciona um listener de clique em cada link do menu principal
+mainNavLinks.forEach(function(link) {
+  link.addEventListener('click', function() {
+    toggleMenu();
+  });
+});
