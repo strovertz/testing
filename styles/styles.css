@@ -1,6 +1,5 @@
-/* Reset CSS /
-/ Simplificado, removendo propriedades redundantes */
-
+/* Reset CSS */
+/* Simplificado, removendo propriedades redundantes */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,124 +18,125 @@ time, mark, audio, video {
   box-sizing: border-box;
   font: inherit;
   vertical-align: baseline;
-  }
-  /* Global styles */
-  body {
+}
+
+/* Global styles */
+body {
   background: url('hero-bg.jpg') fixed no-repeat center / cover;
-  }
+}
 
-  .mapa-section {
+.mapa-section {
   margin: 50px 0;
-  }
+}
 
-  #map-iframe {
+#map-iframe {
   background-color: #fff;
-  }
+}
 
-  #map {
+#map {
   background-color: #f8f8f8;
   padding: 50px 0;
-  }
+}
 
-  #map h2 {
+#map h2 {
   text-align: center;
   font-size: 36px;
   margin-bottom: 30px;
-  }
+}
 
-  .map-container {
+.map-container {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%;
   height: 500px;
-  }
+}
 
-  .map-container iframe {
+.map-container iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: none;
-  }
+}
 
-  .container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  }
+}
 
-  /* Header styles */
-  .header {
+/* Header styles */
+.header {
   background-color: #00cf8e;
   padding: 20px 0;
-  }
+}
 
-  .header .logo {
+.header .logo {
   display: inline-block;
   margin-right: 30px;
-  }
+}
 
-  .header .logo img {
+.header .logo img {
   height: 40px;
-  }
+}
 
-  .header .main-nav {
+.header .main-nav {
   display: inline-block;
-  }
+}
 
-  .header .main-nav ul {
+.header .main-nav ul {
   list-style: none;
   display: inline-block;
-  }
+}
 
-  .header .main-nav li {
+.header .main-nav li {
   display: inline-block;
   margin-right: 30px;
-  }
+}
 
-  .header .main-nav li:last-child {
+.header .main-nav li:last-child {
   margin-right: 0;
-  }
+}
 
-  .header .main-nav a {
+.header .main-nav a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
   letter-spacing: 1px;
-  }
+}
 
-  .menu-toggle {
+.menu-toggle {
   display: none;
-  }
+}
 
-  /* Hero section styles */
-  .hero {
+/* Hero section styles */
+.hero {
   background: url("images/hero-bg.jpg") no-repeat center / cover;
   height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
-  }
+}
 
-  .hero .title {
+.hero .title {
   color: #fff;
   font-size: 60px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
-  }
+}
 
-  .hero .subtitle {
+.hero .subtitle {
   color: #fff;
   font-size: 24px;
   text-align: center;
   margin-bottom: 40px;
-  }
+}
 
-  .hero .btn-primary {
+.hero .btn-primary {
   background-color: #3ad7a4;
   color: #fff;
   padding: 15px 30px;
@@ -150,29 +150,126 @@ time, mark, audio, video {
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 14px;
-  }
+}
 
-  .hero .btn-primary:hover {
+.hero .btn-primary:hover {
   background-color: #74e0bb;
-  }
+}
 
-  /* Services section styles */
-  .services {
+/* Services section styles */
+.services {
   padding: 80px 0;
-  }
+}
 
-  .services .section-title {
+.services .section-title {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
   text-transform: uppercase;
   color: #333;
   margin-bottom: 20px;
-  }
+}
 
-  .services .section-subtitle {
+.services .section-subtitle {
   text-align: center;
   font-size: 18px;
   color: #666;
   margin-bottom: 60px;
-  }
+}
+
+.services .service-item {
+  margin-bottom: 60px;
+}
+
+.services .service-item .icon {
+  font-size: 36px;
+  color: #3ad7a4;
+  margin-bottom: 30px;
+}
+
+.services .service-item h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.services .service-item p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* About section styles */
+.about {
+  padding: 80px 0;
+}
+
+.about .section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about .section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.about .about-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about .about-item .about-img {
+  width: 45%;
+  margin-right: 5%;
+}
+
+.about .about-item .about-img img {
+  max-width: 100%;
+}
+
+.about .about-item .about-text {
+  width: 50%;
+}
+
+.about .about-item .about-text h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about .about-item .about-text p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Contact section styles */
+.contact {
+  padding: 80px 0;
+}
+
+.contact .section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact .section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 60px;
+}
