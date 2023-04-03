@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 from escalas import *
 
+
 def create_map():
     mapa = folium.Map(location=[-28.899666, -54.555794], zoom_start=13)
     add_satellite_layer(mapa)
@@ -44,4 +45,5 @@ def add_points_from_json_to_map(file_path, map_obj):
     folium.plugins.Draw().add_to(map_obj)
 
     return folium.plugins.Draw()
+
 
