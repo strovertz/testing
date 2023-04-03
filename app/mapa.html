@@ -1,0 +1,200 @@
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;head&gt;    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+    
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-1.12.4.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_94e75a52d70fd37b174a4660a80b8b65 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            &lt;/style&gt;
+        
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css&quot;/&gt;
+&lt;/head&gt;
+&lt;body&gt;    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_94e75a52d70fd37b174a4660a80b8b65&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;    
+    
+            var map_94e75a52d70fd37b174a4660a80b8b65 = L.map(
+                &quot;map_94e75a52d70fd37b174a4660a80b8b65&quot;,
+                {
+                    center: [-28.899666, -54.555794],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_abe093dfbc433d0f151183f68ad10fcb = L.tileLayer(
+                &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            ).addTo(map_94e75a52d70fd37b174a4660a80b8b65);
+        
+    
+            var tile_layer_e82406c436e49ad0124b5a3b09b6dfd8 = L.tileLayer(
+                &quot;https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}\u0026key=AIzaSyBEXDD_vKYyk8Mg65jL_da8prvBGEh0_20&quot;,
+                {&quot;attribution&quot;: &quot;Google Maps Satellite&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            ).addTo(map_94e75a52d70fd37b174a4660a80b8b65);
+        
+    
+            var layer_control_10d3addf12daba2c94f38a0c2c25a38e = {
+                base_layers : {
+                    &quot;openstreetmap&quot; : tile_layer_abe093dfbc433d0f151183f68ad10fcb,
+                    &quot;Sat\u00e9lite Google&quot; : tile_layer_e82406c436e49ad0124b5a3b09b6dfd8,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_10d3addf12daba2c94f38a0c2c25a38e.base_layers,
+                layer_control_10d3addf12daba2c94f38a0c2c25a38e.overlays,
+                {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
+            ).addTo(map_94e75a52d70fd37b174a4660a80b8b65);
+            tile_layer_e82406c436e49ad0124b5a3b09b6dfd8.remove();
+        
+    
+            var marker_2ccca9ae5bc9633e5580ab67289ea476 = L.marker(
+                [-28.915691, -54.556773],
+                {}
+            ).addTo(map_94e75a52d70fd37b174a4660a80b8b65);
+        
+    
+        var popup_a573a16c57a7f9ef4ca45dd4e323924a = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_635588d406f0e11add27a50e02c87293 = $(`&lt;div id=&quot;html_635588d406f0e11add27a50e02c87293&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sede Fazenda 1&lt;/div&gt;`)[0];
+                popup_a573a16c57a7f9ef4ca45dd4e323924a.setContent(html_635588d406f0e11add27a50e02c87293);
+            
+        
+
+        marker_2ccca9ae5bc9633e5580ab67289ea476.bindPopup(popup_a573a16c57a7f9ef4ca45dd4e323924a)
+        ;
+
+        
+    
+    
+            var marker_f722316774000860081e9bc1fed4bdbb = L.marker(
+                [-28.894776, -54.542115],
+                {}
+            ).addTo(map_94e75a52d70fd37b174a4660a80b8b65);
+        
+    
+        var popup_11334054c8480798a161714978ccba7a = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_79dbf414f7cb4694f0e071a1bf9857aa = $(`&lt;div id=&quot;html_79dbf414f7cb4694f0e071a1bf9857aa&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sede Fazenda 2&lt;/div&gt;`)[0];
+                popup_11334054c8480798a161714978ccba7a.setContent(html_79dbf414f7cb4694f0e071a1bf9857aa);
+            
+        
+
+        marker_f722316774000860081e9bc1fed4bdbb.bindPopup(popup_11334054c8480798a161714978ccba7a)
+        ;
+
+        
+    
+    
+            var polygon_dc228e0ba2f567691f6fe82360023f6d = L.polygon(
+                [[-28.914309, -54.555116], [-28.919208, -54.556693], [-28.921843, -54.540577], [-28.916435, -54.539869]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.5, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
+            ).addTo(map_94e75a52d70fd37b174a4660a80b8b65);
+        
+    
+        var popup_dbd97899938b3905fc4a84c4f996aca8 = L.popup({&quot;maxWidth&quot;: 500});
+
+        
+            
+                var html_84c60abc987ff44cb4fe21a79889bc33 = $(`&lt;div id=&quot;html_84c60abc987ff44cb4fe21a79889bc33&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Situação do Plantio: Maduro &lt;br&gt;Data do plantio: 2022-10-20&lt;br&gt;Dias desde o plantio: 165&lt;br&gt;Identificador: Terreno 1&lt;/div&gt;`)[0];
+                popup_dbd97899938b3905fc4a84c4f996aca8.setContent(html_84c60abc987ff44cb4fe21a79889bc33);
+            
+        
+
+        polygon_dc228e0ba2f567691f6fe82360023f6d.bindPopup(popup_dbd97899938b3905fc4a84c4f996aca8)
+        ;
+
+        
+    
+    
+            var polygon_1a55c646be526fd2db30c03743bb3b99 = L.polygon(
+                [[-28.889221, -54.558918], [-28.886309, -54.553044], [-28.895494, -54.541462], [-28.899057, -54.555493]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;orange&quot;, &quot;fillOpacity&quot;: 0.5, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
+            ).addTo(map_94e75a52d70fd37b174a4660a80b8b65);
+        
+    
+        var popup_02d0c4f2a595eb808f47df1b71cc7153 = L.popup({&quot;maxWidth&quot;: 500});
+
+        
+            
+                var html_8f9deadc9a568110e875918966336a24 = $(`&lt;div id=&quot;html_8f9deadc9a568110e875918966336a24&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Situação do Plantio: Em enchimento de grãos &lt;br&gt;Data do plantio: 2022-12-12&lt;br&gt;Dias desde o plantio: 112&lt;br&gt;Identificador: Terreno 2&lt;/div&gt;`)[0];
+                popup_02d0c4f2a595eb808f47df1b71cc7153.setContent(html_8f9deadc9a568110e875918966336a24);
+            
+        
+
+        polygon_1a55c646be526fd2db30c03743bb3b99.bindPopup(popup_02d0c4f2a595eb808f47df1b71cc7153)
+        ;
+
+        
+    
+    
+            var options = {
+              position: &quot;topleft&quot;,
+              draw: {},
+              edit: {},
+            }
+            // FeatureGroup is to store editable layers.
+            var drawnItems = new L.featureGroup().addTo(
+                map_94e75a52d70fd37b174a4660a80b8b65
+            );
+            options.edit.featureGroup = drawnItems;
+            var draw_control_6857439fdd86761cc5d64013f33d28e8 = new L.Control.Draw(
+                options
+            ).addTo( map_94e75a52d70fd37b174a4660a80b8b65 );
+            map_94e75a52d70fd37b174a4660a80b8b65.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on(&#x27;click&#x27;, function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems.addLayer(layer);
+             });
+            map_94e75a52d70fd37b174a4660a80b8b65.on(&#x27;draw:created&#x27;, function(e) {
+                drawnItems.addLayer(e.layer);
+            });
+            
+        
+&lt;/script&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>

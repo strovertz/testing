@@ -2,18 +2,26 @@ import folium
 import folium.plugins
 import json
 from datetime import datetime
-from escalas import *
+from libs.escalas import *
 
+# Substitua YOUR_MAPBOX_ACCESS_TOKEN pela sua chave API (access token) do Mapbox
 
-def create_map():
+def create_map(google_api_key):
     mapa = folium.Map(location=[-28.899666, -54.555794], zoom_start=13)
-    add_satellite_layer(mapa)
+    add_google_satellite_layer(mapa, google_api_key)
     return mapa
 
-def add_satellite_layer(map_obj):
-    tile_url = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-    folium.TileLayer(tile_url, attr="Esri World Imagery", name="Satélite").add_to(map_obj)
+def add_satellite_layer(map_obj, mapbox_access_token):
+    tile_url = f"https://api.mapbox.com/v4/mapbox.satellite/{{z}}/{{x}}/{{y}}@2x.png?access_token={mapbox_access_token}"
+    folium.TileLayer(tile_url, attr="Mapbox Satellite", name="Satélite").add_to(map_obj)
     folium.LayerControl().add_to(map_obj)
+
+def add_google_satellite_layer(map_obj, google_api_key):
+    tile_url = f"https://mt1.google.com/vt/lyrs=s&x={{x}}&y={{y}}&z={{z}}&key={google_api_key}"
+    folium.TileLayer(tile_url, attr="Google Maps Satellite", name="Satélite Google").add_to(map_obj)
+    folium.LayerControl().add_to(map_obj)
+# Restante do código ...
+
 
 def add_points_from_json_to_map(file_path, map_obj):
 
