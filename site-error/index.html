@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Agriscan</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap">
+	<link rel="stylesheet" href="styles/reset.css">
 	<link rel="stylesheet" href="styles/styles.css">
-	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-	<!-- Adiciona o CSS do Bootstrap -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
-	<!-- Adiciona o jQuery -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<!-- Adiciona o Popper -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-	<!-- Adiciona o JavaScript do Bootstrap -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+
 </head>
 <body>
 	<header class="header">
@@ -30,7 +29,7 @@
 					<li><a href="#">Services</a></li>
 					<li><a href="#">Portfolio</a></li>
 					<li><a href="#">Blog</a></li>
-					<li><a href="#">Contacts</a></li>
+					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
 			<div class="menu-toggle">
@@ -46,108 +45,120 @@
 			<a href="#" class="btn btn-primary">Get Started</a>
 		</div>
 	</section>
+  <section class="mapa-section">
+    <h2>Mapa do Agricultor</h2>
+    <iframe id="map-iframe" src="mapa.html" frameborder="0" allowfullscreen></iframe>
+  </section>
 
-	<section class="mapa-section">
-		<h2>Mapa do Agricultor</h2>
-		<iframe id="map-iframe" src="mapa.html" frameborder="0" allowfullscreen></iframe>
-	</section>
 
 	<section class="services">
-		<div class="container">
-			<h2 class="section-title">Agriscan é uma empresa especializada no uso de tecnologia de ponta para melhorar a eficiência e a sustentabilidade da agricultura. Nossos serviços incluem:</h2>
-			<p class="section-subtitle">We offer a variety of services to help your business thrive online.</p>
-			<div class="services-grid">
-				<div class="service" data-aos="fade-up">
-					<img src="images/agriculture-precision.jpg" alt="Agricultura de Precisão" class="service-icon">
-					<h3 class="service-title">Agricultura de Precisão</h3>
-					<p class="service-description">Utilizamos sensores, drones e sistemas de GPS para coletar e analisar dados em tempo real, ajudando a melhorar o uso de recursos e a tomar decisões informadas.</p>
-				</div>
-				<div class="service" data-aos="fade-up">
-					<img src="images/pest-monitoring.jpg" alt="Monitoramento de Pragas e Doenças" class="service-icon">
-					<h3 class="service-title">Monitoramento de lavoura</h3>
-					<p class="service-description">Realizamos um monitoramento rigoroso de pragas e doenças que podem afetar a produtividade da sua lavoura, utilizando tecnologias de ponta e profissionais altamente qualificados.</p>
-				</div>
-				<div class="service" data-aos="fade-up">
-					<img src="images/fertilization.jpg" alt="Fertilização" class="service-icon">
-					<h3 class="service-title">Fertilização</h3>
-					<p class="service-description">Desenvolvemos soluções personalizadas para a fertilização do solo, garantindo a nutrição adequada das plantas e o aumento da produtividade.</p>
-				</div>
+    <div class="container">
+      <h2 class="section-title">Agriscan é uma empresa especializada no uso de tecnologia de ponta para melhorar a eficiência e a sustentabilidade da agricultura. Nossos serviços incluem:</h2>
+      <p class="section-subtitle">We offer a variety of services to help your business thrive online.</p>
+      <div class="services-grid">
+        <div class="service">
+          <img src="images/agriculture-precision.jpg" alt="Agricultura de Precisão" class="service-icon">
+          <h3 class="service-title">Agricultura de Precisão</h3>
+          <p class="service-description">Utilizamos sensores, drones e sistemas de GPS para coletar e analisar dados em tempo real, ajudando a melhorar o uso de recursos e a tomar decisões informadas.</p>
+        </div>
+        <div class="service">
+          <img src="images/pest-monitoring.jpg" alt="Monitoramento de Pragas e Doenças" class="service-icon">
+          <h3 class="service-title">Monitoramento de Pragas e Doenças</h3>
+          <p class="service-description">Utilizamos imagens de satélite e análise de dados para detectar e prevenir pragas e doenças, ajudando a proteger as plantações e a reduzir o uso de pesticidas.</p>
+        </div>
+        <div class="service">
+          <img src="images/seo-icon.svg" alt="SEO Icon" class="service-icon">
+          <h3 class="service-title">SEO</h3>
+          <p class="service-description">We'll help you optimize your website and improve your search engine rankings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Seção do Portfólio -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2 data-aos="fade-down">Portfólio</h2>
+      <div class="portfolio-items" data-aos="fade-up">
+        <div class="portfolio-item">
+          <img src="images/portfolio-1.jpg" alt="Portfolio Item">
+          <div class="portfolio-item-overlay">
+            <h3 class="portfolio-item-title">Project Name</h3>
+            <p class="portfolio-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada eros quis enim lobortis.</p>
+            <a href="#" class="btn btn-secondary">View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/portfolio-2.jpg" alt="Portfolio Item">
+          <div class="portfolio-item-overlay">
+            <h3 class="portfolio-item-title">Project Name</h3>
+            <p class="portfolio-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada eros quis enim lobortis.</p>
+            <a href="#" class="btn btn-secondary">View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/portfolio-3.jpg" alt="Portfolio Item">
+          <div class="portfolio-item-overlay">
+            <h3 class="portfolio-item-title">Project Name</h3>
+            <p class="portfolio-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada eros quis enim lobortis.</p>
+            <a href="#" class="btn btn-secondary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-				<div class="service" data-aos="fade-up">
-					<img src="images/irrigation.jpg" alt="Irrigação" class="service-icon">
-					<h3 class="service-title">Irrigação</h3>
-					<p class="service-description">Oferecemos sistemas modernos e eficientes de irrigação, que garantem o fornecimento adequado de água para as plantas e evitam o desperdício de recursos.</p>
-				</div>
 
-				<div class="service" data-aos="fade-up">
-					<img src="images/harvest.jpg" alt="Colheita" class="service-icon">
-					<h3 class="service-title">Colheita</h3>
-					<p class="service-description">Realizamos uma colheita eficiente e cuidadosa, utilizando as técnicas mais avançadas do mercado para garantir a qualidade dos produtos e maximizar a sua produção.</p>
-				</div>
-			</div>
-		</section>
+  <!-- Seção Sobre com animações -->
+  <section class="about">
+    <div class="container">
+      <h2 data-aos="fade-down">Sobre Nós</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Texto sobre a empresa...</p>
+      <img src="about.jpg" alt="Imagem ilustrativa" data-aos="zoom-in" data-aos-delay="200">
+    </div>
+  </section>
 
-		<!-- Section: Portfolio -->
-		<section class="portfolio" id="portfolio">
-			<div class="container">
-			  <div class="section-heading">
-				<h2 class="section-title">Nosso Portfólio</h2>
-				<p class="section-subtitle">Veja alguns dos nossos trabalhos recentes</p>
-			  </div>
-			  <ul class="portfolio-items">
-				<li class="portfolio-item" data-aos="fade-up">
-				  <img src="images/portfolio-1.jpg" alt="Projeto 1">
-				  <div class="portfolio-item-overlay">
-					<h3 class="portfolio-item-title">Projeto 1</h3>
-					<p class="portfolio-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada eros quis enim lobortis.</p>
-					<a href="#" class="btn btn-secondary">Ver Projeto</a>
-				  </div>
-				</li>
-				<li class="portfolio-item" data-aos="fade-up">
-				  <img src="images/portfolio-2.jpg" alt="Projeto 2">
-				  <div class="portfolio-item-overlay">
-					<h3 class="portfolio-item-title">Projeto 2</h3>
-					<p class="portfolio-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada eros quis enim lobortis.</p>
-					<a href="#" class="btn btn-secondary">Ver Projeto</a>
-				  </div>
-				</li>
-				<li class="portfolio-item" data-aos="fade-up">
-				  <img src="images/portfolio-3.jpg" alt="Projeto 3">
-				  <div class="portfolio-item-overlay">
-					<h3 class="portfolio-item-title">Projeto 3</h3>
-					<p class="portfolio-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada eros quis enim lobortis.</p>
-					<a href="#" class="btn btn-secondary">Ver Projeto</a>
-				  </div>
-				</li>
-			  </ul>
-			</div>
-		  </section>
-		  <footer>
-			<div class="container">
-			  <div class="row">
-				<div class="col-md-6">
-				  <div class="footer-text">
-					<p>© 2023 by Company Name. Proudly created with <a href="#">Wix.com</a></p>
-				  </div>
-				</div>
-				<div class="col-md-6">
-				  <div class="footer-social">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-instagram"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </footer>
 
-		  <!-- Scripts -->
-		  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-		  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
-		  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-		  <script src="js/script.js"></script>
 
-		  </body>
-		  </html>
+  <section class="contact-section" id="contact">
+    <h2>Entre em contato</h2>
+    <form>
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="footer-text">&copy; 2023 Agriscan</p>
+      </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+
+  </body>
+  </html>
+

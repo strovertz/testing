@@ -2,11 +2,17 @@ import folium
 import folium.plugins
 import json
 from datetime import datetime
-from libs.escalas import *
+from escalas import *
 
 def create_map():
     mapa = folium.Map(location=[-28.899666, -54.555794], zoom_start=13)
+    add_satellite_layer(mapa)
     return mapa
+
+def add_satellite_layer(map_obj):
+    tile_url = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+    folium.TileLayer(tile_url, attr="Esri World Imagery", name="Satélite").add_to(map_obj)
+    folium.LayerControl().add_to(map_obj)
 
 def add_points_from_json_to_map(file_path, map_obj):
 
