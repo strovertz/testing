@@ -3,10 +3,10 @@ from libs.escalas import *
 
 def get_map_html():
     with open('access_token.txt', 'r') as f:
-        mapbox_access_token = f.readline().strip()
-    mapa = create_map(mapbox_access_token)
-    add_points_from_json_to_map('data/data.json', mapa)
-    map
+        google_api_key = f.readline().strip()
+    mapa = create_map(google_api_key)
+    add_points_from_json_to_map(["libs/data/data.json", "libs/data/drawn_data.json"], mapa)
+    add_draw_control(mapa)
     return mapa._repr_html_()
 
 map_html = get_map_html()

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa</title>
+    {{ map_html | safe }}
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const drawnItems = new L.FeatureGroup();
+          const map = L.map('map').setView([51.505, -0.09], 13);
+
+          // Adicione o código necessário para adicionar as camadas do mapa aqui (TileLayer, etc.)
+
+          map.addLayer(drawnItems);
+
+          const drawControl = new L.Control.Draw({
+            edit: {
+              featureGroup: drawnItems,
+            },
+          });
+
+          map.addControl(drawControl);
+
+          map.on('draw:created', function(e) {
+            const layer = e.layer;
+            drawnItems.addLayer(layer);
+
+            // Salvar dados desenhados no localStorage (ou enviar para o servidor)
+            const drawnData = drawnItems.toGeoJSON();
+            localStorage.setItem('drawnData', JSON.stringify(drawnData));
+          });
+
+          // Carregar dados desenhados do localStorage (ou do servidor)
+          const savedDrawnData = localStorage.getItem('drawnData');
+          if (savedDrawnData) {
+            const savedLayers = JSON.parse(savedDrawnData);
+            L.geoJSON(savedLayers).eachLayer(function(layer) {
+              drawnItems.addLayer(layer);
+            });
+          }
+        });
+      </script>
+
+</body>
+</html>
