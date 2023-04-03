@@ -7,6 +7,7 @@ def get_map_html():
     mapa = create_map(google_api_key)
     add_points_from_json_to_map(["libs/data/data.json", "libs/data/drawn_data.json"], mapa)
     add_draw_control(mapa)
+    add_route_planner(mapa)
     return mapa._repr_html_()
 
 map_html = get_map_html()

@@ -15,6 +15,9 @@ def add_google_satellite_layer(map_obj, google_api_key):
     folium.TileLayer(tile_url, attr="Google Maps Satellite", name="Satélite Google").add_to(map_obj)
     folium.LayerControl().add_to(map_obj)
 
+def add_route_planner(map_obj):
+    folium.plugins.AntPath(locations=[], color='blue', weight=5).add_to(map_obj)
+
 def add_points_from_json_to_map(file_paths, map_obj):
     for file_path in file_paths:
         if os.path.exists(file_path) and os.stat(file_path).st_size > 0:
